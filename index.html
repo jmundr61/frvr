@@ -1,220 +1,803 @@
 
-<html>
-	<head>
-		<link rel="icon" type="image/png" href="i/favicon.png" />
+<!DOCTYPE html>
 
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1, maximum-scale=1">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-		<meta name="apple-mobile-web-app-capable" content="no" />
+<html lang="en">
+<head>
+	<meta charset="UTF-8"/>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+	<!--
+		/**
+		* @author Chris Benjaminsen http://chrisbenjaminsen.com/ @benjaminsen
+		 */
+		/** @license
+			Slash FRVR 1.0.6
+			More info at http://frvr.com
 
-		<meta property="og:title" content="FRVR - Great games for Web and Mobile" />
-		<meta property="og:description" content="FRVR creates the next generation of games that runs right in peoples browsers. FRVR's HTML5 technologies allows games to be built once and seamlessly published to all platforms." />
-		<meta property="og:site_name" content="FRVR"/>
-		<meta property="og:url" content="http://frvr.com" />
-		<meta property="og:type" content="website" />
-		<meta property="og:locale" content="en_US" />
-		<meta property="game:publisher" content="https://www.facebook.com/frvrgames" />
-		<meta property="fb:app_id" content="447050222104724" />
-		<meta name='yandex-verification' content='4b0ee4b0fc85383d' />
+			Copyright (c) 2013+ FRVR ApS
 
-		<link rel="stylesheet" type="text/css" href="./s/css.css">
+			All Rights Reserved!
+			FRVR is a registered trademark of FRVR ApS
+		*/
+		/**
+			Well hello there!
 
-		<title>FRVR - Great games for Web and Mobile</title>
-			
+			I see you are interested in the details of how this game was made!
+			It's written using a custom HTML5 engine build around PixiJS.
+
+			While I can't tell you more on the how, there is much more on the why to be find at 
+			http://blog.chrisbenjaminsen.com where I write frequent status updates on the games I build
+			under the FRVR brand - - including a 100% honest track record of money earned and spend.
+
+			Hack on!
+			Chris Benjaminsen
+			chrisbenjaminsen.com
+
+			- - - - - - - - - - - - - -
+
+			Slash FRVR would not be possible without the following open source projects:
+
+			pixi.js - v2.2.3
+			Copyright (c) 2012-2014, Mat Groves
+			http://goodboydigital.com/
+			pixi.js is licensed under the MIT License.
+			http://www.opensource.org/licenses/mit-license.php
+			Mat Groves http://matgroves.com/ @Doormat23
+		*/
+	-->
+
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0, viewport-fit=cover">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-title" content="Slash FRVR">
+	<meta name="theme-color" content="#202020">
+	<meta name="HandheldFriendly" content="true" />	
+	<meta name="format-detection" content="telephone=no">
+  	<meta name="msapplication-tap-highlight" content="no">
+	<meta name="google" content="notranslate" />   
+
+	<link rel="canonical" href="http://slash.frvr.com/" />
+
+	<link rel="apple-touch-icon" sizes="60x60" href="./v/1507362535408/i/web/icon60x60.png"/>
+	<link rel="apple-touch-icon" sizes="76x76" href="./v/1507362535408/i/web/icon76x76.png"/>
+	<link rel="apple-touch-icon" sizes="120x120" href="./v/1507362535408/i/web/icon120x120.png"/>
+	<link rel="apple-touch-icon" sizes="196x196" href="./v/1507362535408/i/web/icon196x196.png"/>
+	<link rel="apple-touch-icon" sizes="256x256" href="./v/1507362535408/i/web/icon256x256.png"/>
+	<link rel="apple-touch-icon" sizes="1024x1024" href="./v/1507362535408/i/web/icon1024x1024.png"/>
+
+		<link rel="icon" type="image/png" href="./v/1507362535408/i/web/favicon.png" />
+
+	<link rel="me" href="https://twitter.com/FRVRGames">
+
+	<meta name="facebook_label" content="Play Slash FRVR - Don’t slice the bombs!">
+
+	<meta property="og:title" content="Play Slash FRVR" />
+	<meta property="og:description" content="Slash FRVR let’s you demonstrate your slicing skills!" />
+	<meta property="og:site_name" content="Slash FRVR"/>
+	<meta property="og:url" content="http://slash.frvr.com/" />
+	<meta property="og:type" content="game" />
+	<meta property="og:locale" content="en" />
+	<meta property="og:image" content="https://slash.frvr.com/v/1507362535408/i/web/facebook01.png" />
+	<meta property="fb:app_id" content="1304535852967647" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:site" content="@FRVRGames" />
+	<meta name="twitter:creator" content="@Benjaminsen" />
+	<meta name="twitter:title" content="Play Slash FRVR - Don’t slice the bombs!" />
+	<meta name="twitter:image" content="https://slash.frvr.com/v/1507362535408/i/web/twitter01.png" />
+	<meta name="twitter:description" content="Slash FRVR let’s you demonstrate your slicing skills!" />	
+
+	<meta name="twitter:app:name:iphone" content="Slash FRVR" />
+	<meta name="twitter:app:id:iphone" content="1202853799" />
+	<meta name="twitter:app:name:ipad" content="Slash FRVR" />
+	<meta name="twitter:app:id:ipad" content="1202853799" />
+
+	<meta name="twitter:app:name:googleplay" content="Slash FRVR" />
+	<meta name="twitter:app:id:googleplay" content="com.frvr.slash" />
+
+	<meta name="description" content="Slash FRVR let’s you demonstrate your slicing skills!">
+	<meta name="keywords" content="slash,slice,ninja,sword">
+
+	<title>Play Slash FRVR - Don’t slice the bombs!</title>
+	<style>
+
+		body {
+			background:#c8c8c8;
+			overflow:hidden;
+			position:fixed;
+			font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+			border:0px;padding:0px;margin:0px;
+			width:100%;
+			height:100%;
+			padding-top: constant(safe-area-inset-top);
+		}
+
+		preloader{
+			display:block;
+			width:100%;
+			height:100%;
+			background: #EEEEEE;
+			background:radial-gradient(ellipse at center, #ffffff 1%,#c8c8c8 150%);
+			position:fixed;
+			z-index:5;
+		}
+
+		preloader canvas, preloader img{
+			position: fixed;
+		}
+
+		preloader loadbar{
+			display:none;
+			position:fixed;
+			border:1px solid #afafaf;
+		}
+
+		preloader loadbar div{
+			display:block;
+			width:0%; 
+			height:100%;
+			background-color:#007bb2;
+		}
+
+		#gameCanvas{
+			position: fixed;
+			top:0px;
+			left:0px;
+			width:0px;
+			height:0px;
+			background-color:#000000
+		}
+
+		#overlay{
+			position:absolute;
+			z-index:3;
+			left:50%;
+			margin-left:-70px;
+			visibility:hidden;
+			bottom:3px;
+			overflow:hidden;
+			text-align: center;
+		}
+
+		#overlay div{
+			float:left;
+		}
+
+		#overlay.cn {
+				margin-left: -190px;
+		}
+
+		/* Google+ share button */
+		#overlay.cn div#___plusone_0 {
+			width: 68px !important;
+		}
+
+		#overlay.cn div#___plusone_0 iframe {
+			position: relative !important;
+			top: -4px !important;
+		}
+
+		/* Sina Weibo share button */
+		#overlay wb\:share-button iframe {
+			width: 105px !important;
+		}
+
+		/* QZone share button */
+		#overlay iframe[version="1.0"] {
+			position: relative !important;
+			top: -2px;
+		}
+
+		@-ms-viewport{width:100%}
+
+		content{
+			background-color:#ffffff;
+			display: block;
+			padding:20px;
+			height:100%;
+			overflow:scroll;
+		}
+
+		content metadata{
+			float:right;
+			margin-left:10px;
+			text-align:center;
+		}
+
+		h1{
+			margin:0px;
+			font-weight:100;
+			font-size:50px;
+		}
+		a{
+			line-height:2em;
+		}
+		h3{
+			margin-bottom:0px;
+		}
+
+		@keyframes w{0%{transform:rotate(0deg);}20%{transform:rotate(-3deg) scale(1.4) translate(0px,-5px);}50%{transform:rotate(3deg) scale(1.4) translate(0px,-5px);}80%{transform:rotate(-3deg) scale(1.4) translate(0px,-5px);}100%{transform:rotate(0deg);}}
+		.w {animation:w 1.5s 1;}
+	</style>
 	</head>
+
 	<body>
-		<header><inner>
-			<a href="//frvr.com" id="logo"></a>
-			<a href="#games" class="menu">Games</a>
-			<a href="http://news.frvr.com" class="menu">News</a>
-			<a href="#contact" class="menu">Contact</a>
-			<a href="#press" class="menu">Press</a>
 
-			<a href="//www.facebook.com/frvrgames" class="social" alt="FRVR on Facebook"><img src="i/icon_fb.png"/></a>
-			<a href="//twitter.com/frvrgames" class="social" alt="FRVR on Twitter"><img src="i/icon_twitter.png"/></a>
-			<a href="http://news.frvr.com" class="social" alt="FRVR News"><img src="i/icon_tumblr.png"/></a>
-			<a href="//plus.google.com/+frvrgames" class="social" alt="FRVR on Google+"><img src="i/icon_gplus.png"/></a>
-			<div style="clear:both"></div>
-		</inner></header>
-		<games><inner>
-			<a name="games"><h1>Our Games</h1></a>
-			<game><a href="https://trigon.frvr.com/?s=website" id="trigon" target="_blank" title="Play Trigon FRVR - Color Matching Puzzle Game"><img src="i/g/trigon.png" /></a></game>
-			<game><a href="https://nonogram.frvr.com/?s=website" id="nonogram" target="_blank" title="Play Nonogram FRVR - Relaxing puzzle cross game"><img src="i/g/nonogram.png" /></a></game>
-			<game><a href="https://balloon.frvr.com/?s=website" id="balloon" target="_blank" title="Play Balloon FRVR - Navigate the balloon circle"><img src="i/g/balloon.png" /></a></game>
-			<game><a href="https://slash.frvr.com/?s=website" id="slash" target="_blank" title="Play Slash FRVR - Don't slice the bombs!"><img src="i/g/slash.png" /></a></game>
-			<game><a href="https://basketball.frvr.com/?s=website" id="basketball" target="_blank" title="Play Basketball FRVR - Basketball Hoop Shooter"><img src="i/g/basketball.png" /></a></game>
-			<game><a href="https://lines.frvr.com/alc/?s=website" id="lines" target="_blank" title="Play Lines FRVR - Free Dots and Lines Puzzle Game"><img src="i/g/lines.png" /></a></game>
-			<game><a href="https://hex.frvr.com/?s=website" id="hex" target="_blank" title="Play Hex FRVR - Hexagon Puzzle Game"><img src="i/g/hex.png" /></a></game>
-			<game><a href="https://mahjong.frvr.com/alc/?s=website" id="mahjong" target="_blank" title="Play Mahjong FRVR - Mahjong Solitaire"><img src="i/g/mahjong.png" /></a></game>
-			<game><a href="https://solitaire.frvr.com/?s=website" id="solitaire" target="_blank" title="Play Solitaire FRVR - Klondike Solitaire"><img src="i/g/solitaire.png" /></a></game>
-			<div style="clear:both"></div>
-			<!--<content><inner>
-			</inner></content>
-			<div id="solitairecover">
-				<innercontent>
-					<div class="gamebox">
-						<div id="gameinfo" class="gameinfo">
-							<a href="//frvr.com/play/solitaire/?s=website" alt="Play Solitaire FRVR For Free"><img src="./i/solitaire_icon.png" class="icon"/></a>
-							<div id="playbuttons">
-								<a href="//solitaire.frvr.com/?s=website" alt="Play Solitaire FRVR For Free"><img src="i/website.png"></a>
-								<a href="//itunes.apple.com/app/id911820971" alt="Play Solitaire FRVR on iPhone and iPad"><img src="i/appstore.png"></a>
-								<a href="//play.google.com/store/apps/details?id=com.frvr.solitaire" alt="Play Solitaire FRVR on Android"><img src="i/googleplay.png"></a>
-								<a href="//apps.facebook.com/solitairefrvr/" alt="Play Solitaire FRVR on Facebook"><img src="i/facebook2.png"></a>
-								<div style="clear:both"></div>
-							</div>
-						</div>
-						<div id="game">
-							<h2>Solitaire FRVR</h2>
-							<p>
-								A true to the original remake of the classical Klondike Solitaire game everyone knows and loves. The game features vibrant graphics, smooth animations, a classical jumping card ending, and works great on any Computer, Tablet or Phone.
-							</p>
-							<p>
-								Even better, there is no need to install anything, the game works right in your browser!
-							</p>
-							<div id="playcontainer"></div>
-							<h3>Solitaire FRVR features</h3>
-							<ul>
-								<li>Classic Klondike Solitaire rules.</li>
-								<li>Beautiful graphics.</li>
-								<li>Smooth animations.</li>
-								<li>Classical jumping card animation.</li>
-								<li>iOS, Android and Windows Phone support.</li>
-								<li>Ability to undo moves.</li>
-								<li>Draw 1 &amp; draw 3 game modes.</li>
-								<li>No need to install anything, works without Flash or Java.</li>
-							</ul>
-							<h3>Solitaire FRVR Links</h3>
-							<ul>
-								<li><a href="//www.facebook.com/solitairefrvr" alt="Play Solitaire FRVR">Solitaire FRVR on Facebook</a></li>
-								<li><a href="//frvr.com/tutorials/how-to-play-klondike-solitaire.html" alt="Learn how to play Klondike Solitaire">Learn how to play Klondike Solitaire</a></li>
-							</ul>
-							<h3>Solitaire FRVR Videos</h3>
-							<div class="videolist">
-								<ul>
-									<li><a href="//www.youtube.com/watch?v=womX_rEv2Cc" alt="Solitaire FRVR Trailer"><img src="i/VideoTrailer.png"/><br/>Solitaire FRVR Trailer</a></li>
-									<li><a href="//www.youtube.com/watch?v=2ZUmAYsxn54" alt="Learn how to play draw 1 Klondike Solitaire"><img src="i/VideoDraw1.png"/><br/>Draw 1 Solitaire Toturial</a></li>
-									<li><a href="//www.youtube.com/watch?v=GeKhxnbm0KE" alt="Learn how to play draw 3 Klondike Solitaire"><img src="i/VideoDraw3.png"/><br/>Draw 3 Solitaire Toturial</a></li>
-								</ul>
-							</div>
-						</div>
-						<div style="clear:both"></div>
-					</div>
-				</innercontent>
-			</div>
+		<script>
+		var version = "1.0.6"
 
-			-->
-		</inner></games>
-		<contact><inner>
-			<a name="contact"><h1>Contact</h1></a>
-			<p>
-				Your feedback is important to us! You can use <a href="https://frvr.useresponse.com">UseResponse</a> to submit and vote on user feedback. <a href="https://frvr.useresponse.com">Go there now!</a>
-			</p>
-		</inner></contact>
-		<contact><inner>
-			<p>
-				<!-- Begin MailChimp Signup Form -->
-				<a name="mail"><h1>New Game Alerts</h1></a>
-			<style>
-				#mc_embed_signup form input { 
-					border: 1px solid #aaa; 
-					margin-top: 10px;
-					padding: 6px;
+		var gaPath = '/slash/' + version + '/';
+
+		var initTime = 1*new Date();
+
+			window.vpath = "./v/1507362535408/";
+
+			window.spath = "./v/1507362535408/external.js";
+			window.extsize = 2780873;
+
+			//In seperate code block to load first & not trigger when JS is disabled
+			var preloader = document.createElement('preloader');document.body.appendChild(preloader);
+		</script>
+		<script>
+			//ie9 polyfill
+			if(!(window.console && console.log)) {
+				var fn = function(){};
+				console={log:fn,debug:fn,info:fn,warn:fn,error:fn};
+			}
+			Host = {
+    			Localize:{
+        		languages:
+    				[]
+
+    			},dataUrlsSupported:(function(){
+					var c = document.createElement("canvas");
+					return c.toDataURL&&(c.toDataURL("image/png").indexOf("data:image/png") == 0);
+				})()
+			};
+
+			(function(scope){
+				(function(w,d,a,m){var g='GameAnalytics';w[g]=w[g]||function(){(w[g].q=w[g].q||[]).push(arguments)}})(window,document);
+
+				var relasedCanvasElements = []
+				var completed = 0;
+				var preview = 0;
+				var facebookAPIInited = false;
+				var gameIsLoaded = false;
+
+				scope.getNewCanvasObject = function(){
+					var cachedElement = relasedCanvasElements.pop();
+					if(cachedElement) return cachedElement;
+					return document.createElement('canvas')
 				}
-			</style>
-				Get an email when we release a new game or a major update.
-				<div id="mc_embed_signup">
-				<form action="//frvr.us14.list-manage.com/subscribe/post?u=c6a2a10d2a02fe43532581d47&amp;id=8459ea61f3" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    				<div id="mc_embed_signup_scroll">
-					
-					<input type="email" value="" placeholder="Email address" name="EMAIL" class="required email" id="mce-EMAIL">
-					 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-					<div id="mce-responses" class="clear">
-						<div class="response" id="mce-error-response" style="display:none"></div>
-						<div class="response" id="mce-success-response" style="display:none"></div>
-					</div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    				<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6a2a10d2a02fe43532581d47_8459ea61f3" tabindex="-1" value=""></div>
-    				</div>
-				</form>
+				scope.releaseCanvas = function(canvas){
+					canvas.width = canvas.height = 1
+					relasedCanvasElements.push(canvas)
+				}
+
+				var isFBInstant = !!window.FBInstant;
+
+				if(isFBInstant){
+					gaPath += 'app/facebook_instant/';
+				}
+
+				var intChars = "()<=>?[]^`{|}"
+				var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/!#$&*-,.:;@()<=>?[]^`{|}"
+
+				function fromLong(stringNumber){
+
+					var number = 0;
+
+					for( var a=3;a>=0;a--){
+						number *= 74
+						number += chars.indexOf(stringNumber[a])
+					}
+
+					number = (number/100)-149932
+					return number
+				}
+				function fromFloat(stringNumber){
+
+					var number = 0;
+
+					for( var a=2;a>=0;a--){
+						number *= 74
+						number += chars.indexOf(stringNumber[a])
+					}
+
+					number = (number/100)-2026
+					return number
+				}
+
+				function fromUInt(str){
+					return intChars.indexOf(str[0])*88 + chars.indexOf(str[1])
+				}
+
+				var loadQueue = []
+				var loadQueueTimer = null
+				function triggerQueue(){
+
+					var t = new Date().getTime()
+					while(loadQueue.length && (new Date().getTime()-t<10)){
+						loadQueue.shift()()
+					}
+					if(loadQueue.length){
+						popQueue()
+					}
+				}
+
+				function popQueue(){
+					clearTimeout(loadQueueTimer)
+					if(loadQueueTimer === null) triggerQueue()
+					loadQueueTimer = setTimeout(function(){
+						triggerQueue()
+					},1)
+				}
+
+				scope.getJSGImageWrapper = function(path,actions, cords, drawCallback){
+					var cordOffset = 0;
+					function getCord(){
+						var first = cords[cordOffset++]
+						if(first == "_") return 0
+						if(first == "~") return 1
+						if(first == "%") return 149932
+						if(first == "'") return -149932
+						if(first == "@") return fromLong(cords[cordOffset++]+cords[cordOffset++]+cords[cordOffset++]+cords[cordOffset++])
+						if(intChars.indexOf(first) != -1) return fromUInt(first+cords[cordOffset++])
+						return fromFloat(first+cords[cordOffset++]+cords[cordOffset++]) ;
+					}
+
+					function getColor(){
+						return getCord()?"rgb("+getCord()+","+getCord()+","+getCord()+")":"rgba("+getCord()+","+getCord()+","+getCord()+","+getCord()+")"
+					}
+
+					var assetWidth = getCord()
+					var assetHeight = getCord()
+
+					function toCanvas(canvas,scale){
+						canvas.width = Math.ceil(assetWidth*scale)
+						canvas.height = Math.ceil(assetHeight*scale)
+						var ctx = canvas.getContext('2d')
+						ctx.scale(scale,scale)
+						var canvasStack = [canvas]
+						var fillObject;
+						for( var a=0;a<actions.length;a++){
+							var action = actions[a]
+							switch(action){
+								case "4":{
+									var newCanvas = getNewCanvasObject();
+
+									newCanvas.width = getCord()
+									newCanvas.height = getCord()
+
+									ctx = newCanvas.getContext('2d')
+
+									canvasStack.push(newCanvas)
+									break;
+								}
+
+								case "b":{
+									var pattern = ctx.createPattern(ctx.canvas, "no-repeat");
+									var removed = canvasStack.pop();
+
+									releaseCanvas(removed)
+
+									ctx = canvasStack[canvasStack.length-1].getContext('2d')
+									ctx.fillStyle = pattern;
+
+									break;
+								}
+								case "t":{
+									fillObject = ctx.createLinearGradient(getCord(),getCord(),getCord(),getCord());
+									break;
+								}
+								case "D":{
+									fillObject = ctx.createRadialGradient(getCord(),getCord(),getCord(),getCord(),getCord(),getCord());
+									break;
+								}
+								case "8":{
+									fillObject.addColorStop(getCord(),getColor())
+									break;
+								}
+								case "F":{
+									ctx.fillStyle = fillObject
+									break;
+								}
+								case "f":{
+									ctx.save();
+									break;
+								}
+								case "/":{
+									ctx.bezierCurveTo(getCord(),getCord(),getCord(),getCord(),getCord(),getCord())
+									break;
+								}
+								case "p":{
+									ctx.strokeStyle = getColor()
+									break;
+								}
+								case "w":{
+									ctx.lineCap = "butt"
+									break;
+								}
+								case "y":{
+									ctx.lineJoin = "miter"
+									break;
+								}
+								case "9":{
+									ctx.miterLimit = getCord()
+									break;
+								}
+								case "6":{
+									ctx.fillStyle = getColor()
+									break;
+								}
+								case "n":{
+									ctx.beginPath()
+									break;
+								}
+								case "q":{
+									ctx.closePath()
+									break;
+								}
+								case "o":{
+									ctx.fill()
+									break;
+								}
+								case "P":{
+									ctx.stroke()
+									break;
+								}
+								case "r":{
+									ctx.restore()
+									break;
+								}
+								case "2":{
+									ctx.arc(getCord(),getCord(),getCord(),getCord(),getCord(),getCord()==1)
+									break;
+								}
+								case "m":{
+									ctx.moveTo(getCord(),getCord())
+									break;
+								}
+								case "l":{
+									ctx.lineTo(getCord(),getCord())
+									break;
+								}
+								case "5":{
+									ctx.quadraticCurveTo(getCord(),getCord(),getCord(),getCord())
+									break;
+								}
+								case "C":{
+									ctx.clip();
+									break;
+								}
+								case "E":{
+									ctx.lineWidth = getCord();
+									break;
+								}
+								case "A":{
+									ctx.transform(getCord(),getCord(),getCord(),getCord(),getCord(),getCord())
+									break;
+								}
+								case "u":{
+									ctx.translate(getCord(),getCord())
+									break;
+								}
+								case "V":{
+									ctx.scale(getCord(),getCord())
+									break;
+								}
+								case "0":{
+									ctx.rotate(getCord())
+									break;
+								}
+								case "K":{
+									ctx.globalAlpha = getCord()
+									break;
+								}
+								case "G":{
+									ctx.strokeStyle = fillObject;
+									break;
+								}
+
+								default:{
+									console.error("unhandled",action)
+								}
+							}
+						}
+
+						//Reset JSG drawing
+						cordOffset = 0;
+						getCord();getCord();
+
+						return canvas;
+					}
+
+					return {isJSG:true,path:path,width:assetWidth, height:assetHeight, actions:actions, cords:cords, draw:function(config){
+
+							config = config||{}
+							var scale = config.scale||1
+							var forceCanvas = config.forceCanvas||false;
+							var instantDraw = config.instantDraw||false;
+
+							if( Host.dataUrlsSupported && !forceCanvas){
+								var img = new Image();
+								loadQueue.push(function(){
+									var canvas = toCanvas(
+										getNewCanvasObject(),
+										scale
+									);
+
+									if(drawCallback){
+										img.onload = function(){
+											drawCallback&&drawCallback();
+											drawCallback = null
+										}
+									}
+
+									img.onerror = function(){
+										drawCallback&&drawCallback();
+										drawCallback = null
+									}
+
+									img.src = canvas.toDataURL();
+									releaseCanvas(canvas)
+								})
+								instantDraw ? triggerQueue() : popQueue()
+								return img;
+							}else{
+								var canvas = toCanvas(getNewCanvasObject(),scale);
+								canvas.isCanvas = true;
+								return canvas
+							}
+						}
+					}
+				}
+
+				var canvas = getJSGImageWrapper("logo","6nmllmllo6nmllmllo6nmllllllmlllmlllmllllo6nmllmlllmllo6nmllmlllmlllmllllo6nmlllmlllmllllmllllo6nmlllmlllo6nmlllllllllllllmlllllll//lllllml//lllmllllllllllmlllllll//lllllml//lllm////m////lm////lll//llllm/////llo6nmlllmllmlllmllllo6nmllo6nmlllo6KnmllmllllllllmlllllllloK","Iq7|s~<+(2)N>4>o=K?j>m?r{[<=}b>G}^<W~</(3(`=M?i=E]U>m?q):)]=;=O)#<(~<h<g<n|U(]>4>n>{>P?9=w[D=W`N(0|H_(T>(_==(.=})t?}?9=w>{>P=;=O>Y).:G7>K,D6?7`-[9`i[H{,[H~)y)y)y|U(]k*5)F}^<W(X=[(>)0):)](.=},D6?7|,[@`-[+~_)1<h{W=J}^<W|U(]<I?k)x?E)t?}=E]U[D=W?9=w>Y).?d<n`i[H]r>;]V>}`H]W`-[+~)u)!)!>4>n|U(]{W=J>m?q=E]U(.[3(T>()t?}Ov6<(Iq7<^:G7>K{,[H||>}]$>6`|?<{,[H`i[H]r>;~)J)})7):)])x?E)t?}(.=}>^>Q=y=L=;=O>{>P~(K)z<c)`|s<h|H<h{W=P{W=i{E=i`+<h`+<h^;=h^;=,^k=,^Z)]^Z)/^s)/|s>Y|s>9|H>9{a>|{a?*|s[V|s[h|V?5{SY8uqK1DTvMs0[i`YDTvMNz6!u^Z?B^Z>V^Z>D^r>D|r>Y|s>Y|s>9^:?F^:?0^:yLuSiz?+`YyLu`3;+t`*?G`*>9`*>9^:>9^:^M|s^h|d`m^Z`L^Z^5^3]{{&]Y^3[,^Z[p^Z]u|d]&|s{C|s{n|H{n{a{!{a|u|s|}|s}L|V|i{SSE4qK18k4Ms0}M`Y8k4MNzqI4^Z{&^Z{A^Z`-^r`-|r{C|s{C|s{n^:{.^:QQ3,LzOd3+hz|n`YOd34h0kG3iz0{.`*{m`*{n^:{n^:}P^f}PYEyGq448x}u]|cy548x6y5QBy}<^f6y5s2ycy50:y}u^+Gq4+:y}Pg0y}P^f}.^foq5O;xam5Y*x}u^E}ZY*xIx4E;x}V^f}Vu4y*24K#y}u^4}*U#yyq5q5y}.^f}.^f}g^Oe.4+Hy0E5gHy}x^OOa5gHyMd54Ly}9^WMd5Aeyia52iy}0^juS5qlyIU5Eny}3^m}+^u}3^u}x^nmK5EnyWJ5gly}t^jJF5kkyFB5aky}m^j}m^v}g^v}g^O}g^O}m^eAC5sdysG5sdy}u^evS5sdycU5wcy}2^XcU5:RyqT5aQy}1^UYQ5sOyuN5iOy}v^T2G5iOyHD5sOy}m^T}m^e}m^e~)C)R)O=E]U?F[g{W=J>m?q=M?i<I?k=E]U>Y).<r)+):)]=;=O||>}Ov6<(Gn6)+O.5(.}^<W~_)u)>[q?o`H]W]V>}~_<E<q|B]e`H]W`-[+|,[@~_(x(*mAl}^<W|U=N{[<=]r>;]V>}[q?o[]?*]x?h^E?R^@?X]$>7]r>;?{=P?x=h?x=h>?>K>{>P?9=w?9=w[E=W?{=P~").draw()
+
+				var loadbar = document.createElement("loadbar")
+				var progressbar = document.createElement("div")
+
+				if(!isFBInstant){
+					preloader.appendChild(loadbar)
+					loadbar.appendChild(progressbar)
+					preloader.appendChild(canvas)
+				}
+
+				var ow = 0
+				var oh = 0
+				function handleResize(){
+					var w = document.documentElement.clientWidth;
+					var h = Math.min(window.innerHeight,document.documentElement.clientHeight);
+					if(ow!=w||oh!=h){
+						ow = w;oh = h;
+						var s = Math.min(w,h)*.8>>0
+						var nh = s*0.8187702265>>0
+						var t = ((h-nh*1.15)/2>>0)
+
+						loadbar.style.width = canvas.style.width = s+"px"
+						canvas.style.height = nh +"px"
+						loadbar.style.left = canvas.style.left = ((w-s)/2>>0)+"px"
+						canvas.style.top = t+"px"
+						loadbar.style.height = Math.max(Math.min((s/40>>0),10),4) + "px"
+						loadbar.style.top = (t + nh*1.05)+"px"
+					}
+				}
+				handleResize()
+
+				scope.htmlprogress = function(total, left){
+					completed = Math.max((left / total), completed)
+				}
+
+				var timer = setInterval(function(){
+					if(completed < .5){
+						completed += (.5-completed)/100
+					}
+					preview += (completed-preview)/10
+
+					if(isFBInstant && facebookAPIInited){
+						FBInstant.setLoadingProgress(preview*100>>0)
+					}else progressbar.style.width = (preview*100>>0) + "%"
+					handleResize();
+				},50)
+
+				setTimeout(function(){
+					loadbar&&(loadbar.style.display = "block")
+				},500)
+
+				function handleFacebookLoaded(){
+					if(isFBInstant && facebookAPIInited && gameIsLoaded){
+						FBInstant.setLoadingProgress(100)
+						FBInstant.startGameAsync().then(function(){
+							Host.emit('FBInstantStart')
+						})
+						Host.emit('FBInstantComplete')
+					}
+				}
+
+				scope.htmlclean = function(){
+
+					gameIsLoaded = true;
+					handleFacebookLoaded()
+					clearInterval(timer)
+					document.body.removeChild(preloader)
+					canvas.width = canvas.height = 1
+					loadbar = progressbar = canvas = preloader = null;
+				}
+
+				scope.embeddedAssets = {};
+
+				scope.embedLoad = function(path,file){
+					scope.embeddedAssets[path] = file;
+				}
+
+				scope.loadAssets = function(files, svgCommands, data){
+					for( var a=0;a<files.length;a++){
+						var path = files[a]
+						var svg = svgCommands[a];
+						if(svg){
+							scope.embedLoad(path,[svg,data[a]])
+						}else{
+							scope.embedLoad(path, data[a])
+						}
+					}
+				}
+				var req = new XMLHttpRequest();
+				req.addEventListener('load', function(event){
+					var s = document.createElement("script");
+					//s.text rather than innerHTML for ie9
+					s.text = event.target.responseText;
+					document.documentElement.appendChild(s);
+				})
+
+				req.addEventListener("progress", function(event) {
+				    if (event.lengthComputable) {
+				    	htmlprogress(event.total, event.loaded*.7)
+				    } else {
+				    	htmlprogress(scope.extsize||500000, event.loaded)
+				    }
+				}, false);
+
+				if(scope.spath !== undefined){
+					req.open("GET", spath);
+					req.send()
+				}
+
+				if(isFBInstant){
+					FBInstant.initializeAsync().then(function() {
+						facebookAPIInited = true
+						handleFacebookLoaded()
+					});
+				}
+
+			})(this)
+		</script>
+
+		<canvas id="gameCanvas"></canvas>
+		<script>
+			var cs = document.getElementById('gameCanvas').style;
+			cs.width = cs.height = "100%"
+		</script>
+
+		<div id="overlay"></div>
+
+		<content itemscope="" itemtype="https://schema.org/VideoGame">
+			<h1 itemprop="name">Slash FRVR</h1>
+			<meta itemprop="url" content="http://slash.frvr.com/">
+			<div itemprop="author" itemscope itemtype="http://schema.org/Organization">
+		    <p style="margin-top:0px"><span itemprop="name"><a itemprop="url" href="http://frvr.com/">By FRVR</a></span></p>
+		    </div>
+
+			<metadata>
+				<!--<img itemprop="image" src="" data-original="./v/1507362535408/i/web/icon196x196.png"/>-->
+				<meta itemprop="playMode" content="SinglePlayer">
+    		<p>Genre: <span itemprop="genre"></span></p>
+				<div itemscope itemtype="http://schema.org/AggregateRating" itemprop="aggregateRating">
+					<div>Average Rating: <b itemprop="ratingValue">4.8</b>/<b itemprop="bestRating">5</b></div>
+					<meta itemprop="reviewCount" content="9427">
 				</div>
-				<!--End mc_embed_signup-->
-			</p>
-		</inner></contact>
-		<contact><inner>
-			<a name="press"><h1>Press</h1></a>
-			<p>For press enquiries please contact <a href="mailto:press@frvr.com?subject=press%20enquiry%20on%20FRVR">press@frvr.com</a> directly.<br/> A minimal press kit containg logos can be found <a href="assets/press.zip">here</a>.</p>
-		</inner></contact>
-		<footer><inner>
-			<div style="width:300px;;float:left">FRVR is a trademark of FRVR Limited, all rights reserved.<br>
-			Comments and questions? Send us an <a href="mailto:info@frvr.com?subject=I%20have%20a%20question%20about%20FRVR">email</a><br><a href="http://frvr.com/legal/#PrivacyPolicy">Privacy Policy</a> - <a href="http://frvr.com/legal/#TermsofService">Terms of Service</a>.
-			</div>
-			<div style="float:right;">
-				<iframe src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ffrvrgames&width&layout=standard&action=like&show_faces=false&share=true&height=35&appId=248234388532607" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:35px; " allowTransparency="true"></iframe>
-			</div>
-			<div style="heigh: 1px; overflow: hidden; clear: both;"></div>
-		</inner></footer>
+				<link itemprop="applicationCategory" content="Game">
+				<link itemprop="applicationSubCategory" content="Board, Puzzle">
+				<span itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+					<meta itemprop="price" content="$0">
+					<meta itemprop="priceCurrency" content="USD">
+					<link itemprop="availability" href="http://schema.org/InStock">
+				</span>
+				<meta itemprop="contentRating" content="Everyone">
+				<meta itemprop="playMode" content="SinglePlayer">
+			</metadata>
+
+			<p>Slash everything that moves, except for the bombs! Now you know everything you need to know to play and enjoy this game.</p>
+<p>Slash FRVR Features:</p>
+<ul>
+	<li>Easy to learn gameplay</li>
+	<li>One click or tap play</li>
+	<li>Great music</li>>
+	<li>Amazing Graphics</li>
+</ul>
+<p>Slash, slice and cut your way to success in this simple yet addictive and fun game.</p>
+<p>Train your ninja skills and become a sensei when you reach 1000 points!</p>
+
+			<p><a href=".">Please enable JavaScript to play now!</a></p>
+
+			<h2>More information</h2>
+			<ul>
+				<li><a href="//frvr.com/">FRVR Website</a></li>
+				<li><a href="http://news.frvr.com">FRVR News</a></li>
+				<li><a href="//twitter.com/frvrgames">FRVR on Twitter</a></li>
+				<li><a href="//www.facebook.com/frvrgames">FRVR on Facebook</a></li>
+				<li><a href="//plus.google.com/+Frvrgames">FRVR on Google+</a></li>
+			</ul>
+			<h2>More great games</h2>
+			<ul>
+
+				<li><a href="//hex.frvr.com/">Hex FRVR - Free Hexagon Puzzle</a></li>
+
+				<li><a href="//solitaire.frvr.com/">Solitaire FRVR - Free Klondike Solitaire</a></li>
+
+				<li><a href="//lines.frvr.com/">Lines FRVR - Free Dots and Lines Puzzle Game</a></li>
+
+				<li><a href="//mahjong.frvr.com/">Mahjong FRVR - Free Mahjong Solitaire</a></li>
+
+			</ul>
+			<h2>More platforms</h2>
+			<ul>
+
+					<li><a href="https://itunes.apple.com/app/id1036010745">Play Hex FRVR on iPhone, iPad and iPod.</a></li>
+
+					<li><a href="https://play.google.com/store/apps/details?id=com.frvr.hex">Play Hex FRVR on Android phone and tablet.</a></li>
+
+					<li><a href="https://chrome.google.com/webstore/detail/hex-frvr/kibjffjfmagcmicpmogpieelngkcfggn">Play Hex FRVR in Google Chrome.</a></li>
+
+					<li><a href="http://www.amazon.com/FRVR-Hex/dp/B016R3WQK0/ref=sr_1_1?s=mobile-apps&ie=UTF8&qid=1445212785&sr=1-1&keywords=hex+frvr">Play Hex FRVR on Kindle</a></li>
+
+					<li><a href="https://www.facebook.com/games/hexfrvr/">Play Hex FRVR on Facebook.</a></li>
+
+			</ul>
+
+			<p><a href="//frvr.com/">Always get the greatest new games on frvr.com</a></p>
+		</content>
+
+		<script>
+
+			var frvrJSErrors = []
+			window.onerror = function(errorMsg, url, lineNumber, colno, error) {
+				lineNumber = lineNumber||""
+				colno = colno||""
+				error = error||""
+				window.Host&&Host.Log&&Host.Log( "Javascript Error: " + url + ":" +lineNumber+" : " + errorMsg );
+			 	frvrJSErrors.push( [errorMsg, url, lineNumber] )
+				if(window.ga){
+					var errSrc = url + ': ' + lineNumber + ': ' + colno + ': ' + error;
+					ga('send', 'event', 'Slash JavaScript Error', errorMsg, errSrc, { 'nonInteraction': 1 });
+				}
+				console.log("ERROR", errorMsg + " - " + url + " - " + lineNumber)
+			}
+
+			window.initGoogle = function(){
+				ga('create', 'UA-54081731-1', 'auto');
+				ga('require', 'displayfeatures');
+				ga('send', 'pageview', gaPath + location.search);
+			}
+		</script>
+
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();;a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga(function() {
+				setTimeout(function(){
+					window.location.hash = ""
+					if (window.history && window.history.replaceState instanceof Function) {
+			  			window.history.replaceState({}, document.title,'./');
+					}
+				},5000)
+			});
+		</script>
+		<script>
+ 			window.initGoogle();
+		</script>
+
 	</body>
-	<script>
-
-	/* Global Settings! */
-	window.isAndroid = /(android)/i.test(navigator.userAgent) && !/(Windows)/i.test(navigator.userAgent);
-	window.isSilk = /(silk)/i.test(navigator.userAgent)
-	window.isiOS = /(ipod|iphone|ipad)/i.test(navigator.userAgent)
-
-	if(window.isiOS){
-		document.getElementById('solitaire').href = "https://itunes.apple.com/app/apple-store/id911820971?pt=105280809&ct=FRVR%20Website&mt=8"
-	}
-	if(window.isAndroid && !window.isSilk){
-		document.getElementById('solitaire').href = "market://details?id=com.frvr.solitaire"
-		document.getElementById('hex').href = "market://details?id=com.frvr.hex"
-	}
-
-	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	ga('create', 'UA-107224246-1', 'auto');
-	ga('require', 'displayfeatures');
-	ga('send', 'pageview');
-
-	window.onresize = function(){
-
-		if(document.documentElement.offsetWidth < 700){
-			document.body.className = "mobile"	
-		}else{
-			document.body.className = ""	
-		}
-	}
-	window.onresize()
-
-/*
-	var logo = document.getElementById("logo")
-	var gameinfo = document.getElementById("gameinfo")
-	var container = document.getElementById("playcontainer")
-	var buttons = document.getElementById("playbuttons")
-	window.onresize = function(){
-		logo.style.width = document.documentElement.offsetWidth < 790 ? "86px" : "193px";
-
-		if(document.documentElement.offsetWidth < 600){
-			document.body.className = "mobile"	
-			if(buttons.parentNode != container){
-				container.appendChild(buttons)
-			}
-		}else{
-			document.body.className = ""	
-			if(buttons.parentNode != gameinfo){
-				gameinfo.appendChild(buttons)
-			}
-		}
-
-		 //= document.documentElement.offsetWidth < 600 ? "mobile" : ""
-
-
-
-		//document.getElementById('game').style.paddingLeft = "0px"
-	}
-	window.onresize()**/
-
-
-   </script>
-</html> 
+</html>
